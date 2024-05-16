@@ -6,7 +6,7 @@ import { db } from '../../../db'
 
 export async function POST(req: NextRequest) {
   try {
-    const boyd = await req.text()
+    const body = await req.text()
     const signature = headers().get('stripe-signature')
 
     if (!signature) {
@@ -45,22 +45,22 @@ export async function POST(req: NextRequest) {
           isPaid: true,
           shippingAddress: {
             create: {
-              name: session.customer_details?.name,
-              city: shippingAddress.city,
-              country: shippingAddress.country,
-              postalCode: shippingAddress.postal_code,
-              street: shippingAddress.line1,
-              state: shippingAddress.state
+              name: session.customer_details?.name ?? '',
+              city: shippingAddress.city ?? '',
+              country: shippingAddress.country ?? '',
+              postalCode: shippingAddress.postal_code ?? '',
+              street: shippingAddress.line1 ?? '',
+              state: shippingAddress.state ?? ''
             }
           },
           billingAddress: {
             create: {
-              name: session.customer_details?.name,
-              city: billingAddress.city,
-              country: billingAddress.country,
-              postalCode: billingAddress.postal_code,
-              street: billingAddress.line1,
-              state: billingAddress.state
+              name: session.customer_details?.name ?? '',
+              city: billingAddress.city ?? '',
+              country: billingAddress.country ?? '',
+              postalCode: billingAddress.postal_code ?? '',
+              street: billingAddress.line1 ?? '',
+              state: billingAddress.state ?? ''
             }
           }
         }

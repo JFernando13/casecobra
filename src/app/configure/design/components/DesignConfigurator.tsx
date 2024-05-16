@@ -86,7 +86,7 @@ export function DesignConfigurator({
   const containerRef = useRef<HTMLDivElement | null>(null)
   const phoneCaseRef = useRef<HTMLDivElement | null>(null)
 
-  const saveConfiguration = async () => {
+  async function saveConfiguration() {
     try {
       const {
         left: caseLeft,
@@ -104,22 +104,16 @@ export function DesignConfigurator({
       const actualX = renderedPosition.x - leftOffset
       const actualY = renderedPosition.y - topOffset
 
-      // Create canvas
       const canvas = document.createElement('canvas')
       canvas.width = width
       canvas.height = height
-
-      // Create context of canvas (for drawing)
       const ctx = canvas.getContext('2d')
 
-      // Create user image
       const userImage = new Image()
       userImage.crossOrigin = 'anonymous'
-      userImage.src = imageUrl
-
+      userImage.src = imageUrl.toString()
       await new Promise((resolve) => (userImage.onload = resolve))
 
-      // Drawing with context
       ctx?.drawImage(
         userImage,
         actualX,
@@ -128,17 +122,16 @@ export function DesignConfigurator({
         renderedDimension.height
       )
 
-      // Convert to base64
       const base64 = canvas.toDataURL()
       const base64Data = base64.split(',')[1]
 
       const blob = base64ToBlob(base64Data, 'image/png')
       const file = new File([blob], 'filename.png', { type: 'image/png' })
 
-      await startUpload([file], { configId })
+      await startUpload([file], { configId: configId.toString() })
     } catch (err) {
       toast({
-        title: 'Something went wrong.',
+        title: 'Something went wrong',
         description:
           'There was a problem saving your config, please try again.',
         variant: 'destructive'
@@ -213,7 +206,7 @@ export function DesignConfigurator({
           }}>
           <div className='relative w-full h-full'>
             <NextImage
-              src={imageUrl}
+              src={imageUrl.toString()}
               fill
               alt='your image'
               className='pointer-events-none'
@@ -389,7 +382,7 @@ export function DesignConfigurator({
               <Button
                 onClick={() =>
                   saveConfig({
-                    configId,
+                    configId: configId.toString(),
                     color: options.color.value,
                     finish: options.finish.value,
                     material: options.material.value,

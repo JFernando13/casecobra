@@ -1,5 +1,5 @@
-export function splitArr(arr: T[], n: number): T[][] {
-  const res: T[][] = []
+export function splitArr(arr: any[], n: number): any[][] {
+  const res: any[][] = []
 
   for (let i = 0; i < arr.length; i++) {
     const index = i % n
