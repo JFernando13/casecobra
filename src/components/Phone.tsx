@@ -26,7 +26,7 @@ export function Phone({ className, imgSrc, dark }: Props) {
       <div className='absolute -z-10 inset-0'>
         <img
           src={imgSrc}
-          className='object-cover'
+          className='object-cover w-full h-full'
           alt='overlaying phone image'
         />
       </div>
