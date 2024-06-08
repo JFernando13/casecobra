@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="display: flex; align-items: center; justify-content: center; gap: 16px">
+  <h1>CaseCobra</h1>
+</div>
 
-## Getting Started
+<img src="./public/images/brand/preview-casecobra.png">
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to CaseCobra! Capture your favorite memories with your own personalized phone case. CaseCobra allows you to protect your memories, not just your phone case. Transform your everyday device into a canvas that showcases your most cherished moments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Customizable Designs:** Create unique phone cases with personalized designs. Upload your favorite photos, add text, and choose from a variety of templates to make a case that's truly yours.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **High-Quality Materials:** Protect your phone with cases made from durable, high-quality materials that offer excellent protection against drops and scratches while maintaining a sleek and stylish look.
 
-## Learn More
+3. **Easy-to-Use Interface:** Enjoy a user-friendly design tool that makes customizing your phone case simple and fun. The intuitive interface ensures that anyone can create a beautiful, personalized case in minutes.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Fast Shipping:** Receive your custom phone case quickly with our fast and reliable shipping options. We understand that you want to start showing off your unique case as soon as possible.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Background
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The inspiration behind CaseCobra stems from the desire to blend protection with personalization. In a world where our phones are constantly with us, they become a reflection of who we are. CaseCobra offers a way to keep your phone safe while turning it into a personal statement piece.
 
-## Deploy on Vercel
+In a market flooded with generic phone cases, CaseCobra stands out by offering a highly customizable and personal product. Our commitment to quality and customer satisfaction ensures that every case not only looks great but also provides the protection your phone needs.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Get Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Start creating your personalized phone case with CaseCobra by visiting our website [here](https://casecobra.com). Capture your favorite memories and carry them with you wherever you go, all while protecting your phone with style. Join us and transform your phone into a canvas of your most cherished moments.
